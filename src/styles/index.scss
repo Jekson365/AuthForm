@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&family=KoHo&family=Krub:wght@200&family=Lalezar&family=Lato&family=Raleway:wght@300;500&family=Ysabeau:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+body {
+    background-color: #394867;
+}
+
+.pos-rel {
+    position: relative;
+}
+.errorM-active {
+    opacity: 1;
+}
+.errorM {
+    opacity: 1;
+    background-color: rgb(255, 56, 56);
+    width: fit-content;
+    height: 0px;
+    padding: 20px 10px;
+    position: absolute;
+    // right: -70px;
+    display: flex;
+    color: white;
+    transform: translate(0%, -50%);
+    align-items: center;
+    justify-content: center;
+    top: 100%;
+    right: 0;
+    @media screen and (max-width:768px) {
+        & {
+            top: 80%;
+            left: 0;
+        }
+    } 
+}
+
+form {
+    h1 {
+        color: white;
+    }
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    max-width: 400px;
+    margin: 0 auto;
+    justify-content: center;
+
+    .check-boxes {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        background-color: red;
+        justify-content: center;
+        flex-direction: row;
+
+        .checks {
+            background-color: green;
+        }
+    }
+
+    .submit {
+        border: 0;
+        outline: 0;
+        background-color: #9BA4B5;
+        color: white;
+        width: 120px;
+        margin-top: 30px;
+        cursor: pointer;
+        border-radius: 10px;
+        font-size: 20px;
+        height: 60px;
+    }
+
+    .input-group {
+        margin-top: 10px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        label {
+            margin-bottom: 10px;
+            font-size: 15px;
+            color: #F1F6F9;
+        }
+
+        input,
+        select {
+            font-size: 18px;
+            border-radius: 7px;
+            width: 100%;
+            outline: 0px solid black;
+            border: 0;
+            transition: 0.01s;
+
+            &:focus {
+                outline: 3px solid #9BA4B5;
+            }
+
+            &::placeholder {
+                font-size: 18px;
+            }
+
+            padding: 20px 0px;
+        }
+    }
+}
